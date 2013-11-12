@@ -9,7 +9,7 @@ client = Twitter::REST::Client.new do |config|
   config.access_token_secret = 'GDVzq58rujvlizyzw8y0jNH0PUwM8LpZm34ZZ86wbZpOH'
 end
 
-SCHEDULER.every '15s' do
+SCHEDULER.every '2m' do
   begin
     tweets = client.user_timeline("dlabs_si")
     tweet = tweets.first
